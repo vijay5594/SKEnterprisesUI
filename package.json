@@ -5,8 +5,8 @@
   "homepage": "",
   "description": "SK Enterprises App",
   "engines": {
-    "node": "10.15.1",
-    "npm": "6.4.1"
+    "node": "14.15.0",
+    "npm": "7.0.0"
   },
   "scripts": {
     "ng": "ng",
