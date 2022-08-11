@@ -1,13 +1,18 @@
 {
-  "name": "top-glove",
+  "name": "SK-enterprises",
   "version": "1.0.0",
-  "author": "eMTe Team",
+  "author": "Rsinfosolution",
   "homepage": "",
-  "description": "Top Glove App",
+  "description": "SK Enterprises App",
+  "engines": {
+    "node": "10.15.1",
+    "npm": "6.4.1"
+  },
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
-    "build": "ionic build --prod --aot"
+    "build": "ionic build --prod --aot",
+    "postinstall": "ionic build --aot --prod"
   },
   "private": true,
   "dependencies": {
@@ -24,9 +29,9 @@
     "@angular/platform-browser-dynamic": "~12.2.16",
     "@angular/router": "~12.2.16",
     "@angular/service-worker": "~12.2.16",
-    "@capacitor/android": "^2.4.0",
+    "@capacitor/android": "^2.5.0",
     "@capacitor/cli": "2.4.0",
-    "@capacitor/core": "2.4.0",
+    "@capacitor/core": "2.5.0",
     "@ionic-native/core": "^5.0.7",
     "@ionic-native/social-sharing": "^5.28.0",
     "@ionic-native/splash-screen": "^5.0.0",
@@ -43,31 +48,30 @@
     "ionic-selectable": "^4.7.1",
     "moment": "^2.27.0",
     "ng2-charts": "^2.4.2",
-    "ngx-cookie-service": "^10.0.1",
     "path": "0.12.7",
     "rxjs": "^6.6.0",
     "tslib": "^1.10.0",
-    "zone.js": "~0.11.5"
+    "zone.js": "~0.11.5",
+    "typescript": "^4.3.5"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^12.2.17",
+    "@angular-devkit/build-angular": "^12.2.16",
     "@angular/language-service": "~12.2.16",
     "@ionic/lab": "3.1.7",
     "@types/chartist": "^0.11.0",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",
-    "codelyzer": "^5.1.2",
-    "jasmine-core": "~3.5.0",
+    "codelyzer": "^6.0.0",
+    "jasmine-core": "~3.8.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~6.3.20",
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage-istanbul-reporter": "~2.1.0",
     "karma-jasmine": "~3.0.1",
-    "karma-jasmine-html-reporter": "^1.4.2",
+    "karma-jasmine-html-reporter": "^1.7.0",
     "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
-    "tslint": "~6.1.0",
-    "typescript": "^4.3.5"
+    "tslint": "~6.1.0"
   }
 }
