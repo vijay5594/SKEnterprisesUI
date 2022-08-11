@@ -1,0 +1,48 @@
+<ion-header class="ion-no-border">
+  <ion-item class="navbarcolor">
+    <ion-avatar slot="end">
+      <img src="../../../assets/man2.png" id="hover-trigger" />
+    </ion-avatar>
+    <ion-label class="title-head">SK ENTERPRISES</ion-label>
+  </ion-item>
+</ion-header>
+<ion-popover trigger="hover-trigger" trigger-action="hover">
+  <ng-template>
+    <ion-item lines="none">
+      <ion-icon slot="start" name="person"></ion-icon>
+      <p>{{ currentUser }}</p>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-icon slot="start" name="desktop"></ion-icon>
+      <p>{{ role }}</p>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-button (click)="logout()" style="padding-right: 10px" class="primary">
+        <ion-icon slot="start" name="log-out-outline"></ion-icon>
+        Logout
+      </ion-button>
+    </ion-item>
+  </ng-template>
+</ion-popover>
+<ion-content>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="tab1" refresh>
+        <ion-icon class="navBarIcon" name="albums-outline"></ion-icon>
+        <ion-label>Product</ion-label>
+      </ion-tab-button>
+      <ion-tab-button tab="tab3">
+        <ion-icon class="navBarIcon" name="people"></ion-icon>
+        <ion-label>Customer</ion-label>
+      </ion-tab-button>
+      <ion-tab-button tab="tab7">
+        <ion-icon class="navBarIcon" name="analytics-outline"></ion-icon>
+        <ion-label><span>₹</span> Pay</ion-label>
+      </ion-tab-button>
+      <ion-tab-button tab="tab5">
+        <ion-icon class="navBarIcon" name="person"></ion-icon>
+        <ion-label>Profile</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-content>
