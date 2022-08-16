@@ -149,4 +149,16 @@ export class ApiService {
         const url = this.getPaymentApiUrl('TotalAmount');
         return this.http.post(url, params);
     }
+    messageApi(params: any): Observable<any> {
+
+        
+
+        const url = '/SMSApi/rest/send?userId=vijay5594&password=Vijay%4053384&senderId=SKGRP&sendMethod=simpleMsg&msgType=TEXT&msg=hi+this+is+salman&mobile=918072222427&duplicateCheck=true&format=json';
+        return this.http.get(url, {
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+                'cache-control': 'no-cache'
+            }
+        });
+    }
 }

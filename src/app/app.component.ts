@@ -25,6 +25,7 @@ export class AppComponent implements OnInit {
     ) {
         this.initializeApp();
         this.CheckUser();
+        this.smsplivo()
 
     }
     ngOnInit() {
@@ -45,6 +46,25 @@ export class AppComponent implements OnInit {
                 this.apiService.logout();
             }
         });
+    }
+    testsms() {
+        this.apiService.messageApi('hello').subscribe(data => {
+            console.log(data);
+        })
+    }
+
+    smsplivo() {
+        let plivo = require('plivo');
+        let client = new plivo.Client('MAYMU5MDVHMDEYN2VKMT', 'MjRmOTNhOWU5ZDQ4N2E0YmYyNDhjNjRmMjkyODMw');
+
+        client.messages.create({
+            src: '916380757076',
+            dst: '919003388439',
+            text: 'Hello, this is a sample text from Plivo',
+        }).then(function(response) {
+            console.log(response)
+        });
+
     }
 
 }

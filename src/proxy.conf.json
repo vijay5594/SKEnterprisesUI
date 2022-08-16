@@ -1,0 +1,11 @@
+{
+    "/SMSApi/*": {
+        "target": "https://www.smsgateway.center,",
+        "secure": true,
+        "changeOrigin": true,
+        "logLevel": "debug",
+        "pathRewrite": {
+            "^/api": ""
+          }
+    }
+}
